@@ -34,7 +34,10 @@ JFrame frame = new JFrame();
 	public void run() {
 		// 2. Add the four images that match keyboard keys like this:
 		// images.put(new Integer(KeyEvent.VK_UP), "up.jpg");
-
+		images.put(new Integer(KeyEvent.VK_UP), "up.jpg");
+		images.put(new Integer(KeyEvent.VK_DOWN), "down.jpg");
+		images.put(new Integer(KeyEvent.VK_RIGHT), "right.jpg");
+		images.put(new Integer(KeyEvent.VK_LEFT), "left.jpg");
 		// 3. Use a JOptionPane to tell the user the rules: "Press the matching
 		// key when
 		// 'Simon says' otherwise press a different key"
@@ -74,26 +77,26 @@ JOptionPane.showMessageDialog(null, "Push the matching key when Simon says, othe
 
 	private void showImage() {
 		// 5. Initialize your frame to a new JFrame()
-
+JFrame showImage = new JFrame();
 		// 6. Set the frame to visible
-
+showImage.isVisible();
 		// 7. Uncomment the following line to add a random image to your frame
-		// frame.add(getNextRandomImage());
+		showImage.add(getNextRandomImage());
 
 		// 8. Set the name of your frame
 
 		// 9. Pack the frame
-
+showImage.pack();
 		// 10. Set the defaultCloseOperation of your frame to
-		// JFrame.EXIT_ON_CLOSE
+		showImage.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		// 11. Add a key listener to the frame
-
+showImage.addKeyListener(this);
 		// 12. Create a new instance of Random
-
+showImage.add(getNextRandomImage());
 		// 13. Use the Random and the speak method to either say
 		// "Simon says press this key" or "Press this key"
-
+JOptionPane.showMessageDialog(null, "simon says " + showImage);
 		// 14. Above, set the value of simonSays to true/false appropriately
 
 	}
