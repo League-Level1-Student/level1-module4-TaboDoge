@@ -43,12 +43,12 @@ JFrame frame = new JFrame();
 		// 'Simon says' otherwise press a different key"
 JOptionPane.showMessageDialog(null, "Push the matching key when Simon says, otherwise press a different key");
 		// 4. Call the showImage method to show an image
-
+showImage("down");
 	}
 
 	public void keyPressed(KeyEvent e) {
 		// 15. Make a points variable to track the score.
-
+int points = 0;
 		// 16. If the keyCode matches the imageIndex and "Simon says"
 
 		// 17. Increase the value of score
@@ -73,9 +73,10 @@ JOptionPane.showMessageDialog(null, "Push the matching key when Simon says, othe
 		// 23. Dispose of the frame
 
 		// 24. Call the showImage method to show a new image
+
 	}
 
-	private void showImage() {
+	private void showImage(String name) {
 		// 5. Initialize your frame to a new JFrame()
 JFrame showImage = new JFrame();
 		// 6. Set the frame to visible
@@ -84,7 +85,7 @@ showImage.isVisible();
 		showImage.add(getNextRandomImage());
 
 		// 8. Set the name of your frame
-
+showImage.setName("name");
 		// 9. Pack the frame
 showImage.pack();
 		// 10. Set the defaultCloseOperation of your frame to
@@ -98,7 +99,7 @@ showImage.add(getNextRandomImage());
 		// "Simon says press this key" or "Press this key"
 JOptionPane.showMessageDialog(null, "simon says " + showImage);
 		// 14. Above, set the value of simonSays to true/false appropriately
-
+simonSays = false;
 	}
 
 	private Component getNextRandomImage() {
