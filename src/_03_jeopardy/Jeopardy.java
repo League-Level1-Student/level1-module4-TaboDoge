@@ -56,11 +56,11 @@ frame.setTitle("Frame");
 		// 3. Create a JPanel variable to hold the header using the createHeader method
 JPanel panel = new JPanel();
 		// 4. Add the header component to the quizPanel
-quizPanel.add(comp);
+quizPanel.add(panel);
 		// 5. Add the quizPanel to the frame
 frame.add(quizPanel);
 		// 6. Use the createButton method to set the value of firstButton
-createButton();
+createButton("22");
 		// 7. Add the firstButton to the quizPanel
 
 		// 8. Write the code to complete the createButton() method below. Check that your
@@ -93,14 +93,13 @@ createButton();
 	private JButton createButton(String dollarAmount) {
 		
 		// Create a new JButton
-
+JButton button = new JButton();
 		// Set the text of the button to the dollarAmount
-
+button.setText("dollarAmount");
 		// Increment the buttonCount (this should make the layout vertical)
-
+buttonCount++;
 		// Return your new button instead of the temporary button
-
-		return new JButton("temporary button");
+		return new JButton("button");
 	}
 
 	public void actionPerformed(ActionEvent e) {
