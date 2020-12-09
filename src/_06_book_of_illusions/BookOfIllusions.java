@@ -1,5 +1,7 @@
 package _06_book_of_illusions;
 
+import java.awt.Label;
+
 /*
  *    Copyright (c) The League of Amazing Programmers 2013-2019
  *    Level 1
@@ -21,19 +23,20 @@ public class BookOfIllusions implements MouseListener {
 
 	// 1. Make a JFrame variable and initialize it using "new JFrame()"
 JFrame frame = new JFrame();
+JLabel label = new JLabel();
 	public void run() {
 		// 2. make the frame visible
 		frame.setVisible(true);
 		// 3. set the size of the frame
-		
+		frame.setSize(460, 460);
 		// 4. find 2 images and save them to your project’s default package
 		//done
 		// 5. make a variable to hold the location of your image. e.g. "illusion.jpg"
 		//done
 		// 6. create a variable of type "JLabel" but don’t initialize it yet
-		JLabel label = new JLabel();
+		
 		// 7. use the "loadImage..." methods below to initialize your JLabel
-		label = loadImageFromComputer("illusion2.jpg");
+		label = loadImageFromComputer("illusion1.jpg");
 		// 8. add your JLabel to the frame
 		frame.add(label);
 		// 9. call the pack() method on the frame
@@ -47,9 +50,12 @@ JFrame frame = new JFrame();
 		System.out.println("clicked");
 		// 12. remove everything from the frame that was added earlier
 		//done
+		frame.remove(label);
 		// 13. load a new image like before (this is more than one line of code)
-		
+		label = loadImageFromComputer("illusion2.png");
+		frame.add(label);
 		// 14. pack the frame
+		frame.pack();
 	}
 
 	// [OPTIONAL] 15. goad your users with some annoying or witty pop-ups
