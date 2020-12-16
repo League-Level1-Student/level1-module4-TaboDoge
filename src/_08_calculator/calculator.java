@@ -4,13 +4,15 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 
 public class calculator {
-
+int num1;
+int num2;
 	JFrame frame = new JFrame();
 	JButton a = new JButton();
 	JButton s = new JButton();
 	JButton m = new JButton();
 	JButton d = new JButton();
-	
+	JText nu1 = new JText();
+			
 	public void calculatorFront() {
 		frame.add(a);
 		a.setText("add");

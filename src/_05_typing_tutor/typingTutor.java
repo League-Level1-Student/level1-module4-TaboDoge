@@ -10,8 +10,6 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-import jdk.nashorn.internal.ir.Module.ImportEntry;
-
 public class typingTutor implements KeyListener {
 	char currentLetter;
 	 Random r = new Random();

@@ -61,6 +61,36 @@ sound.play();
 pause(10);
    		 // 12. Insert your completed Magic 8 ball code here
 JOptionPane.showMessageDialog(null, "odin cat");
+int r = 0;
+int y=0;
+r = new Random().nextInt(4);
+// 3. Print out this variable
+//JOptionPane.showMessageDialog(null, r);
+// 4. Get the user to enter a question for the 8 ball
+
+// 5. If the random number is 0
+if (r == (0)){
+JOptionPane.showMessageDialog(null, "Yes");
+}
+
+// -- tell the user "Yes"
+
+// 6. If the random number is 1
+else if (r == (1)) {
+// -- tell the user "No"
+JOptionPane.showMessageDialog(null, "No");
+}
+// 7. If the random number is 2
+else if (r == (2)) {
+JOptionPane.showMessageDialog(null, "Maybe you should ask Google");
+}
+// -- tell the user "Maybe you should ask Google?"
+
+// 8. If the random number is 3
+else if (r ==(3)) {
+// -- write your own answer
+JOptionPane.showMessageDialog(null, "ghnjml;?");
+}
    	 }
 
     }
